@@ -1,0 +1,49 @@
+pagina de cadastro de appointment
+<%- include("partials/header.ejs")%> <%- include("partials/menu.ejs")%>
+<div class="container">
+  <h1>Cadastro de Tarefa</h1>
+  <form action="/consulta" method="post">
+    <div class="container">
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control"
+        placeholder="Nome do Paciente"
+      />
+      <input
+        type="email"
+        name="email"
+        id="emial"
+        class="form-control mt-2"
+        placeholder="emial@emial.com"
+      />
+      <input
+        type="text"
+        name="cpf"
+        id="cpf"
+        class="form-control mt-2 cpf"
+        placeholder="000.000.000-00"
+      />
+      <input
+        type="text"
+        name="description"
+        id="description"
+        class="form-control mt-2"
+        placeholder="Descrição"
+      />
+      <input
+        type="date"
+        name="date"
+        id="date"
+        class="form-control mt-2"
+        placeholder="26/12/2020"
+      />
+      <input type="time" name="time" id="time" class="form-control mt-2" />
+      <button type="submit" class="btn btn-primary btn-block mt-2">
+        Agendar
+      </button>
+    </div>
+  </form>
+</div>
+<%- include("partials/footer.ejs")%>

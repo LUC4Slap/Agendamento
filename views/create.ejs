@@ -1,0 +1,65 @@
+<%- include("partials/header.ejs")%> <%- include("partials/menu.ejs")%>
+<div class="container">
+  <h1>Cadastro de Tarefa</h1>
+  <form action="/consulta" method="post">
+    <div class="container">
+      <input
+        type="text"
+        name="obrigacao"
+        id="obrigacao"
+        class="form-control"
+        placeholder="Obrigação"
+      />
+      <div>
+        <label class="mt-2" for="competencia">Competência</label>
+        <input
+          type="date"
+          name="competencia"
+          id="competencia"
+          class="form-control"
+          placeholder="Competência"
+        />
+      </div>
+
+      <div>
+        <label class="mt-2" for="previsao">Previsão de Entrega</label>
+        <!-- <input
+          type="text"
+          name="previsao"
+          id="previsao"
+          class="form-control date"
+          placeholder="Previsão"
+        /> -->
+        <input
+          type="date"
+          name="previsao"
+          id="previsao"
+          class="form-control"
+          placeholder="Previsão"
+        />
+      </div>
+
+      <div>
+        <label class="mt-2" for="vencimento">Vencimento</label>
+        <!-- <input
+          type="text"
+          name="vencimento"
+          id="vencimento"
+          class="form-control date"
+          placeholder="Vencimento"
+        /> -->
+        <input
+          type="date"
+          name="vencimento"
+          id="vencimento"
+          class="form-control"
+          placeholder="Vencimento"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary btn-block mt-2">
+        Agendar
+      </button>
+    </div>
+  </form>
+</div>
+<%- include("partials/footer.ejs")%>

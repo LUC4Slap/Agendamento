@@ -1,0 +1,16 @@
+<%- include("partials/header.ejs")%>
+<%- include("partials/menu.ejs")%>
+<div class="container">
+  <h1><%= tarefa.obrigacao %></h1>
+  <p>Competência: <%= tarefa.competencia%></p>
+  <p>Previsão de entrega: <%= tarefa.previsao%></p>
+  <p>Vencimento em: <%= tarefa.vencimento%></p>
+  <p>Vai vencer em: <%= venceEm%> dias</p>
+  <% if(tarefa.finished == false) {%>
+    <form action="/finished" method="post">
+      <input type="hidden" name="id" value="<%= tarefa._id %>">
+      <button type="submit" class="btn btn-primary">Finalizar</button>
+    </form>
+  <% } %>
+</div>
+<%- include("partials/footer.ejs")%>
