@@ -86,7 +86,8 @@ app.get("/event/:id", async (req, res) => {
 app.post("/finished", async (req, res) => {
   try {
     let { id } = req.body;
-    await appointmentService.FinishedTarefa(id);
+    let resp = await appointmentService.FinishedTarefa(id);
+    console.log("Terminado: ", resp);
     res.redirect("/");
   } catch (error) {
     console.log(error);
