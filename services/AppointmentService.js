@@ -55,7 +55,6 @@ class AppointmentService {
   async FinishedTarefa(id) {
     try {
       let resp = await Appo.findByIdAndUpdate(id, { finished: true });
-      console.log("ID: ", id);
       return resp;
     } catch (err) {
       console.log(err);

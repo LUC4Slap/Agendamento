@@ -55,7 +55,6 @@ app.post("/consulta", async (req, res) => {
 app.get("/getCalendar", async (req, res) => {
   try {
     let appointments = await appointmentService.GetAll(false);
-    console.log(appointments);
     res.json(appointments);
   } catch (error) {
     console.log(error);
@@ -87,7 +86,6 @@ app.post("/finished", async (req, res) => {
   try {
     let { id } = req.body;
     let resp = await appointmentService.FinishedTarefa(id);
-    console.log("Terminado: ", resp);
     res.redirect("/");
   } catch (error) {
     console.log(error);
