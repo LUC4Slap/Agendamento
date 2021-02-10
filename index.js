@@ -68,6 +68,7 @@ app.get("/event/:id", async (req, res) => {
     let tarefa = await appointmentService.GetById(id);
     let days = await calc.calcularDiasRestantes(tarefa);
     let tarefaFormatada = {
+      id,
       obrigacao: tarefa.obrigacao,
       competencia: tarefa.competencia,
       vencimento: tarefa.vencimento,
@@ -85,7 +86,8 @@ app.get("/event/:id", async (req, res) => {
 app.post("/finished", async (req, res) => {
   try {
     let { id } = req.body;
-    let resp = await appointmentService.FinishedTarefa(id);
+    console.log(id);
+    await appointmentService.FinishedTarefa(id);
     res.redirect("/");
   } catch (error) {
     console.log(error);

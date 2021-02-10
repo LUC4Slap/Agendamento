@@ -1,28 +1,31 @@
 <%- include("partials/header.ejs")%> <%- include("partials/menu.ejs")%>
 <div class="container">
-  <h1>Cadastro de Tarefa</h1>
+  <h1>Cadastro de Conta</h1>
   <form action="/consulta" method="post">
     <div class="container">
-      <input
+      <div>
+        <label class="mt-2" for="obrigacao">Nome Conta</label>
+        <input
         type="text"
         name="obrigacao"
         id="obrigacao"
         class="form-control"
         placeholder="Obrigação"
       />
+      </div>
       <div>
-        <label class="mt-2" for="competencia">Competência</label>
+        <label class="mt-2" for="competencia">Dia Chegada</label>
         <input
           type="date"
           name="competencia"
           id="competencia"
           class="form-control"
-          placeholder="Competência"
+          placeholder="Dia Chegada"
         />
       </div>
 
       <div>
-        <label class="mt-2" for="previsao">Previsão de Entrega</label>
+        <label class="mt-2" for="previsao">Previsão de Pagamento</label>
         <!-- <input
           type="text"
           name="previsao"
@@ -35,7 +38,7 @@
           name="previsao"
           id="previsao"
           class="form-control"
-          placeholder="Previsão"
+          placeholder="Previsão de Pagamento"
         />
       </div>
 
